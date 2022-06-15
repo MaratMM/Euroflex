@@ -1,0 +1,54 @@
+//необходимая часть, не удалять!!!!!!!!!
+@mixin font($font_name, $file_name, $weight, $style) {
+
+    @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+    }
+    }
+
+//добавляем шрифты
+@import "fonts";
+
+
+//глобальные настройки
+
+html, body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F8F5EE;
+    margin: 0;
+}
+.wrapper {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+//переменные
+$mobile-media-size: 425px;
+$mob-tabl-media-size: 760px;
+
+//mixin для центровки
+
+@mixin midle-centred ($size-width) {
+    max-width: $size-width;
+    margin: 0 auto;
+    padding: 0px 10px 0 10px;
+}
+
+//основная стилизация (импорты)
+
+@import "header";
+@import "main";
+// @import "footer";
+// @import "main_page";
+// @import "catalog";
+// @import "productPage";
+// @import "cart";
+// @import "thankyou";
+
+

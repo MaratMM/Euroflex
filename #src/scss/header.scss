@@ -1,0 +1,101 @@
+.button-red {
+    background-color: #FF5C5C;
+    color: #FFFFFF;
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-image: url('./../img/header_background-image.png');
+    background-size: 100%;
+
+    .navigation {
+        &__callback-button {
+            width: 147px;
+            height: 26px;
+            border-radius: 2px;
+            border: none;
+            cursor: pointer;
+        }
+        &__callback-number {
+            font-size: 18px;
+        }
+
+        &__callback {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        display: flex;
+        justify-content: space-between;
+
+        &__logo-text {
+            font-size: 12px;
+            text-align: end;
+            margin-top: -6px;
+        }
+
+        &__navbar {
+            list-style: none;
+            flex-wrap: wrap;
+            display: flex;
+            padding: 0 30px;
+
+            &__item {
+                margin: 0 10px;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                    border-bottom: 0.25px solid #BCBFC4;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .short-deskription {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        &__text-1 {
+            font-size: 32px;
+        }
+        &__text-2 {
+            font-size: 23px;
+        }
+        &__icons {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+        }
+        &__icon {
+            width: 130px;
+            height: 145px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__icon-text {
+            font-size: 13px;
+            text-align: center;
+        }
+    }
+    .modal-window {
+        width: 300px;
+        height: 400px;
+        background-color: #FFFFFF;
+        position: absolute;
+        bottom: -5%;
+        right: 10%;
+        &__form {
+            display: flex;
+            flex-direction: column;
+        }
+        &__button {
+            border: none;
+        }
+    }
+}
