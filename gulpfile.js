@@ -1,4 +1,4 @@
-/** НЕ ЗАБУДЬ ДОБАВИТЬ В SKRIPT.JS ИСХОДНИКА
+/** НЕ ЗАБУДЬ ДОБАВИТЬ В SKRIPT.JS ИСХОДНИКА, нужен для работы плагина webp-css
   function testWebP(callback) {
     var webP = new Image();
     webP.onload = webP.onerror = function () {
@@ -37,11 +37,11 @@
             fonts: project_folder+"/fonts/",
         },
         src:{
-            html: [sourse_folder+"/*.html", "!"+sourse_folder+"/_*.html"],
-            css: sourse_folder+"/scss/style.scss",
-            js: sourse_folder+"/js/script.js",
-            img: sourse_folder+"/img/**/*.{jpg,png,svg,gif,ico,webp}",
-            fonts: sourse_folder+"/fonts/*.ttf",
+            html: [sourse_folder + "/*.html", "!"+sourse_folder+"/_*.html"],
+            css: sourse_folder + "/scss/style.scss",
+            js: sourse_folder + "/js/script.js",
+            img: sourse_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+            fonts: sourse_folder + "/fonts/*.ttf",
         },
         watch:{
             html: sourse_folder+"/**/*.html",

@@ -2,14 +2,16 @@
     <div class="modal-window">
         <p class="modal-window__caption"><b>Получите расчет за 15 мин и спецпредложение на первый заказ!</b></p>
         <p class="modal-window__alert">Количество спепредложений в рамках месяца ограничено</p>
-        <form action="" class="modal-window__form">
+        <form action="somefile.php" class="modal-window__form">
             <label for="modal-window__form-name" class="modal-window__form-label">Ваше имя*</label>
-            <input type="text" id="modal-window__form-name" placeholder="Петров Петр" class="modal-window__form-input">
+            <input type="text" required id="modal-window__form-name" placeholder="Петров Петр"
+                class="modal-window__form-input">
             <label for="modal-window__form-phone" class="modal-window__form-label">Ваш номер*</label>
-            <input type="tel" pattern="" name="" id="modal-window__form-phone" class="modal-window__form-input"
+            <input type="tel" required pattern="" name="" id="modal-window__form-phone" class="modal-window__form-input"
                 placeholder="">
             <input type="button" value="Получить СПЕЦПРЕДЛОЖЕНИЕ" class="button-red modal-window__button">
         </form>
+        <span class="modal-window__confiditial">Мы гарантируем конфиденциальность данных</span>
     </div>
     <div class="navigation">
         <div class="navigation__logo">

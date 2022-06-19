@@ -18,6 +18,7 @@ header {
             border: none;
             cursor: pointer;
         }
+
         &__callback-number {
             font-size: 18px;
         }
@@ -55,22 +56,27 @@ header {
             }
         }
     }
+
     .short-deskription {
         display: flex;
         flex-direction: column;
         width: 50%;
+
         &__text-1 {
             font-size: 32px;
         }
+
         &__text-2 {
             font-size: 23px;
         }
+
         &__icons {
             list-style: none;
             display: flex;
             justify-content: space-around;
             padding: 0;
         }
+
         &__icon {
             width: 130px;
             height: 145px;
@@ -78,24 +84,89 @@ header {
             flex-direction: column;
             align-items: center;
         }
+
         &__icon-text {
             font-size: 13px;
             text-align: center;
         }
     }
+
     .modal-window {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 300px;
         height: 400px;
+        padding: 50px 65px 20px 65px;
         background-color: #FFFFFF;
         position: absolute;
         bottom: -5%;
         right: 10%;
+
+        &__caption {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 23px;
+            line-height: 32px;
+        }
+
+        &__alert {
+            color: #80A2C5;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
         &__form {
             display: flex;
             flex-direction: column;
+            width: 100%;
+
+            &-label {
+                margin-bottom: 5px;
+            }
+
+            &-input {
+                margin-bottom: 15px;
+                border: none;
+                background-color: #EDEFF2;
+                padding: 5px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
         }
+
+        &__confiditial {
+            color: #BCBFC4;
+            position: relative;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 12px;
+            text-align: center;
+            &::before {
+                content: '';
+                position: absolute;
+                left: -20px;
+                bottom: -5px;
+                width: 20px;
+                height: 20px;
+                background-repeat: no-repeat;
+                background-image: url('./../img/icons/lock.svg');
+            }
+        }
+
         &__button {
             border: none;
+            height: 50px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
         }
     }
 }
