@@ -390,4 +390,16 @@ header .modal-window__button {
       justify-content: space-around;
 }
 
+.slide-block {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
 .webp header { background-image: url(./../img/header_background-image.webp); }

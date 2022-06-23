@@ -1,4 +1,7 @@
 //добавление других js  к общему файлу
+////////импорты//////////
+
+
 
 
 //необходимая часть , не удалять!!!!!!!!!! нужен для работы плагина webp-css
@@ -23,7 +26,7 @@ window.addEventListener('DOMContentLoaded', function () {
     //////////////функция вывода размеров   console.log(salePrice[i].getBoundingClientRect().width);
 
 
-/////////////////////////////////////СЛАЙДЕР///////////////////////////////////////////////
+    /////////////////////////////////////СЛАЙДЕР///////////////////////////////////////////////
     //две кнопки назад и вперед для слайдера
     let slaiderButtonBack = document.querySelector('.production-slaider__button-back');
     let slaiderButtonForw = document.querySelector('.production-slaider__button-forw');
@@ -74,6 +77,30 @@ window.addEventListener('DOMContentLoaded', function () {
     //слушаем кнопки назад и вперед
     slaiderButtonBack?.addEventListener('click', clickButtonBack);
     slaiderButtonForw?.addEventListener('click', clickButtonForw);
+
+
+    ////////////////////скрипт для слайдера//////////////////////
+    const swiper = new Swiper('.sliderSwiper', {
+    // Optional parameters
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });;
+    /////////////////////////////////////////////////////////////
 
 });
 
