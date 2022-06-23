@@ -390,6 +390,35 @@ header .modal-window__button {
       justify-content: space-around;
 }
 
+.industry-solutions__list-solutions {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.industry-solutions__item-solution {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 200px;
+          flex: 0 0 200px;
+}
+
+.industry-solutions__item-solution h2 {
+  text-align: center;
+}
+
+.industry-solutions__item-solution__list-in-item {
+  padding: 0;
+}
+
 .slide-block {
   background-color: red;
   width: 100px;
