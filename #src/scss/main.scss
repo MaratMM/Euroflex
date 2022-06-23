@@ -4,6 +4,17 @@
 }
 
 .ous-production {
+  h1 {
+    text-align: center;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    color: #646566;
+  }
+
   &__item {
     list-style: none;
     display: flex;
@@ -106,6 +117,23 @@
 
 
 .industry-solutions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    text-align: center;
+  }
+
+  &__caption {
+    color: #646566;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+  }
+
   &__list-solutions {
     list-style: none;
     margin: 0 auto;
@@ -118,13 +146,88 @@
 
   &__item-solution {
     flex: 0 0 200px;
+    min-height: 260px;
+    margin: 8px 8px;
+    border-radius: 2%;
+    padding: 10px 23px 0 48px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
+
+    &_vagatables {
+      background-image: url('../img/vagetable.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 
     h2 {
       text-align: center;
+      margin-left: -20px;
+      text-transform: uppercase;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 26px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #646566;
+      ;
     }
 
     &__list-in-item {
+
       padding: 0;
+      list-style: none;
+
+    }
+
+    &__item-of-list {
+      padding: 5px 0;
+      position: relative;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      color: #646566;
+      ;
+
+      &::before {
+        position: absolute;
+        content: '';
+        left: -26px;
+        top: 7px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 174, 174, 0.8);
+      }
+    }
+  }
+
+  &__button-close-open {
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+
+    &__text {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-align: center;
+      color: #FFAEAE;
+      margin: 10px 0;
+    }
+    &>div.button-c-o {
+      content: '';
+      height: 46px;
+      width: 46px;
+      align-self: center;
+      background-image: url('../img/Subtract.png');
+
     }
   }
 }
