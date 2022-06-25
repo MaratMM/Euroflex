@@ -18,6 +18,8 @@
     //цикл отслеживания нажатия на ЭЛЕМЕНТЫ слайдера как дивчик
     for (let k = 0; k < ousProduction.length; k++) {
         ousProduction[k].addEventListener('click', () => {
+            ousProduction[index].classList.remove('ousProductionActiveItem');
+            ousProduction[k].classList.add('ousProductionActiveItem');
             slaiderItems[index]?.classList.remove('show');
             index = k;
             slaiderItems[k]?.classList.add('show');

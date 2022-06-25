@@ -38,6 +38,16 @@ body {
   padding: 0 10px;
 }
 
+body,
+html {
+  font-family: "Roboto";
+  font-style: normal;
+}
+
+button {
+  cursor: pointer;
+}
+
 .button-red {
   background-color: #FF5C5C;
   color: #FFFFFF;
@@ -140,8 +150,9 @@ header .short-deskription__icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding: 0;
 }
 
@@ -158,6 +169,7 @@ header .short-deskription__icon {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: 90px;
 }
 
 header .short-deskription__icon-text {
@@ -178,7 +190,7 @@ header .modal-window {
           align-items: center;
   width: 300px;
   height: 400px;
-  padding: 50px 65px 20px 65px;
+  padding: 10px 30px 20px 30px;
   background-color: #FFFFFF;
   position: absolute;
   bottom: -5%;
@@ -222,6 +234,11 @@ header .modal-window__form-input {
   border: none;
   background-color: #EDEFF2;
   padding: 5px;
+  background: #EDEFF2;
+  -webkit-box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.12);
+          box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+  color: #939599;
 }
 
 header .modal-window__form-input:focus {
@@ -253,14 +270,28 @@ header .modal-window__confiditial::before {
 header .modal-window__button {
   border: none;
   height: 50px;
+  cursor: pointer;
   text-transform: uppercase;
   margin-bottom: 10px;
+  -webkit-box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
+          box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
 }
 
 .ous-production__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0;
+}
+
+hr.doter-horizon-line {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 5px dashed rgba(0, 0, 0, 0.1);
+  margin-bottom: 100px;
+  padding: 0;
 }
 
 .ous-production h1 {
@@ -276,6 +307,8 @@ header .modal-window__button {
 
 .ous-production__item {
   list-style: none;
+  width: 160px;
+  height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -286,6 +319,19 @@ header .modal-window__button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px;
+}
+
+.ous-production__item.ousProductionActiveItem {
+  background: #FAFAFA;
+  -webkit-box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .ous-production__item > span {
@@ -302,6 +348,7 @@ header .modal-window__button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 120px;
 }
 
 .production-slaider__button-back {
@@ -341,10 +388,23 @@ header .modal-window__button {
 
 .production-slaider__name {
   grid-area: slaidername;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.04em;
+  color: #939599;
 }
 
 .production-slaider__text {
   grid-area: slaidertext;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0;
+  color: #646566;
 }
 
 .production-slaider__body-slaider_grid-wrapper {
@@ -354,8 +414,22 @@ header .modal-window__button {
 }
 
 .production-slaider__button {
-  /* position: absolute; */
-  display: none;
+  position: absolute;
+  bottom: 0px;
+  left: 40%;
+  background: #FFFFFF;
+  border: 2px solid #FFAEAE;
+  -webkit-box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
+          box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 50px;
+  width: 290px;
+  color: #FF5C5C;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 .production-slaider__body-slaider__item {
@@ -548,6 +622,26 @@ header .modal-window__button {
   -ms-flex-item-align: center;
       align-self: center;
   background-image: url("../img/Subtract.png");
+}
+
+.industry-solutions__text-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  width: 394px;
+}
+
+.industry-solutions__consultation-button {
+  border: none;
+  height: 50px;
+  -webkit-box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
+          box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
 }
 
 .slide-block {
