@@ -442,6 +442,19 @@ header .modal-window__button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-height: 1000px;
+  overflow: hidden;
+  -webkit-transition: max-height 1s ease, overflow 1s ease-out;
+  -o-transition: max-height 1s ease, overflow 1s ease-out;
+  transition: max-height 1s ease, overflow 1s ease-out;
+}
+
+.industry-solutions__list-solutions.visually-hidden {
+  max-height: 0px;
+  overflow: hidden;
+  -webkit-transition: max-height 1s ease, overflow 1s ease-out;
+  -o-transition: max-height 1s ease, overflow 1s ease-out;
+  transition: max-height 1s ease, overflow 1s ease-out;
 }
 
 .industry-solutions__item-solution {
@@ -512,6 +525,7 @@ header .modal-window__button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  cursor: pointer;
 }
 
 .industry-solutions__button-close-open__text {

@@ -1,29 +1,4 @@
-//добавление других js  к общему файлу
-////////импорты//////////
-
-//необходимая часть , не удалять!!!!!!!!!! нужен для работы плагина webp-css
-function testWebP(callback) {
-    let webP = new Image();
-    webP.onload = webP.onerror = function () {
-        callback(webP.height == 2);
-    };
-    webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-}
-testWebP(function (support) {
-    if (support == true) {
-        document.querySelector('body').classList.add('webp');
-    } else {
-        document.querySelector('body').classList.add('no-webp');
-    }
-});
-
-//основной скрипт
-
-window.addEventListener('DOMContentLoaded', function () {
-    //////////////функция вывода размеров   console.log(salePrice[i].getBoundingClientRect().width);
-
-
-    /////////////////////////////////////СЛАЙДЕР///////////////////////////////////////////////
+/////////////////////////////////////СЛАЙДЕР///////////////////////////////////////////////
     //две кнопки назад и вперед для слайдера
     let slaiderButtonBack = document.querySelector('.production-slaider__button-back');
     let slaiderButtonForw = document.querySelector('.production-slaider__button-forw');
@@ -74,38 +49,3 @@ window.addEventListener('DOMContentLoaded', function () {
     //слушаем кнопки назад и вперед
     slaiderButtonBack?.addEventListener('click', clickButtonBack);
     slaiderButtonForw?.addEventListener('click', clickButtonForw);
-;//мой собственный слайдер, простой но мой
-
-    ////////////////////скрипт для слайдера swiper//////////////////////
-    if (document.querySelector('.swiper')) {
-  const swiper = new Swiper('.sliderSwiper', {
-    // Optional parameters
-    loop: true,
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  });
-}
-;
-    /////////////////////////////////////////////////////////////
-
-    /////////////сокрытие раздела отраслевые решения при нажатии н а кнопку///////////////////
-    let buttonCloseOpen = document.querySelector('.industry-solutions__button-close-open');
-    
-    buttonCloseOpen?.addEventListener('click', ()=> {
-        document.querySelector('.industry-solutions__list-solutions').classList.toggle('visually-hidden');
-    })
-});

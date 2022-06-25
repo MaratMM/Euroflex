@@ -1,0 +1,12 @@
+//схлопывание блока по нажатию кнопки и добавлению класса
+.class-name {
+    max-height: 5000px;
+    overflow: hidden;
+    transition: max-height 1.5s ease, overflow 1.5s ease-out;
+
+    &.visually-hidden {
+      max-height: 0px;
+      overflow: hidden;
+      transition: max-height 1.5s ease, overflow 1.5s ease-out;
+    }
+  }

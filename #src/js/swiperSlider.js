@@ -1,4 +1,5 @@
-const swiper = new Swiper('.sliderSwiper', {
+if (document.querySelector('.swiper')) {
+  const swiper = new Swiper('.sliderSwiper', {
     // Optional parameters
     loop: true,
   
@@ -18,3 +19,4 @@ const swiper = new Swiper('.sliderSwiper', {
       el: '.swiper-scrollbar',
     },
   });
+}
