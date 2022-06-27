@@ -20,3 +20,30 @@ if (document.querySelector('.swiper')) {
     },
   });
 }
+
+if (document.querySelector('.swiper')) {
+  const swiper = new Swiper('.sliderProduction', {
+    // Optional parameters
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+    grabCursor: true,
+    slidesPerView: 5,
+  });
+}
