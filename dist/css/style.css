@@ -644,6 +644,20 @@ hr.doter-horizon-line {
   text-align: center;
 }
 
+.sliderProdWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sliderProduction {
+  width: 980px;
+  height: 170px;
+}
+
 .sliderProduction .swiper-pagination-bullet {
   width: 20px;
   height: 20px;
@@ -655,18 +669,6 @@ hr.doter-horizon-line {
   background: rgba(255, 51, 51, 0.5);
   width: 20px;
   height: 20px;
-}
-
-.slide-block {
-  background-color: red;
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-}
-
-.swiper {
-  width: 600px;
-  height: 300px;
 }
 
 .webp header { background-image: url(./../img/header_background-image.webp); }

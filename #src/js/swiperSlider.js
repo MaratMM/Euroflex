@@ -35,15 +35,17 @@ if (document.querySelector('.swiper')) {
   
     // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.next-forw',
+      prevEl: '.prev-back',
     },
   
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
     grabCursor: true,
     slidesPerView: 5,
+    spaceBetween: 20,
+    // autoplay: {
+    //   delay: 3000,
+    //   stopOnLastSlide: false,
+    //   disableOnInteraction: false,
+    // },
   });
 }
