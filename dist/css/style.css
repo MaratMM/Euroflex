@@ -488,6 +488,7 @@ hr.doter-horizon-line {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 50px;
 }
 
 .industry-solutions h1 {
@@ -653,22 +654,121 @@ hr.doter-horizon-line {
           align-items: center;
 }
 
+.sliderProdWrapper > .prev-back {
+  position: relative;
+}
+
+.sliderProdWrapper > .next-forw {
+  position: relative;
+}
+
+.sliderProdWrapper > .prev-back::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 50%;
+  width: 42px;
+  height: 42px;
+  background-image: url("./../img/icons/button-back.png");
+}
+
+.sliderProdWrapper > .next-forw::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  width: 42px;
+  height: 42px;
+  background-image: url("./../img/icons/button-back.png");
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .sliderProduction {
   width: 980px;
   height: 170px;
 }
 
 .sliderProduction .swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   background: #8b8c8d;
   border: 1px solid #BCBFC4;
 }
 
 .sliderProduction .swiper-pagination-bullet-active {
   background: rgba(255, 51, 51, 0.5);
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
+}
+
+.wrapper-our-products-and-sliderProduction {
+  background-image: url("./../img/our-product-background.png");
+  background-size: cover;
+}
+
+.our-products {
+  margin: 0 auto;
+  width: 980px;
+}
+
+.our-products > .our-products__caption {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.our-products__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.our-products__euroflex-this-list {
+  list-style: none;
+  padding: 0;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.our-products__link {
+  color: #FF5C5C;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.our-products__statistic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.our-products__statistic-block__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 59px;
+  color: #FF5C5C;
+}
+
+.our-products__statistic-block__name > span {
+  font-size: 28px;
+  line-height: 33px;
+  padding-bottom: 5px;
+}
+
+.our-products__statistic-block__descrition {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .webp header { background-image: url(./../img/header_background-image.webp); }
@@ -676,3 +776,9 @@ hr.doter-horizon-line {
 .webp .industry-solutions__item-solution_vagatables { background-image: url(../img/vagetable.webp); }
 
 .webp .industry-solutions__button-close-open > div.button-c-o { background-image: url(../img/Subtract.webp); }
+
+.webp .sliderProdWrapper > .prev-back::before { background-image: url(./../img/icons/button-back.webp); }
+
+.webp .sliderProdWrapper > .next-forw::before { background-image: url(./../img/icons/button-back.webp); }
+
+.webp .wrapper-our-products-and-sliderProduction { background-image: url(./../img/our-product-background.webp); }

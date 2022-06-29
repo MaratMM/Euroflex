@@ -165,6 +165,7 @@ $maxHeightForListSolution: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 50px;
 
   h1 {
     text-align: center;
@@ -310,6 +311,35 @@ $maxHeightForListSolution: 1000px;
 .sliderProdWrapper {
   display: flex;
   align-items: center;
+
+  &>.prev-back {
+    position: relative;
+  }
+
+  &>.next-forw {
+    position: relative;
+  }
+
+  &>.prev-back::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    width: 42px;
+    height: 42px;
+    background-image: url('./../img/icons/button-back.png');
+  }
+
+  &>.next-forw::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+    width: 42px;
+    height: 42px;
+    background-image: url('./../img/icons/button-back.png');
+    transform: rotate(180deg);
+  }
 }
 
 .sliderProduction {
@@ -317,15 +347,81 @@ $maxHeightForListSolution: 1000px;
   height: 170px;
 
   .swiper-pagination-bullet {
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     background: #8b8c8d;
     border: 1px solid #BCBFC4;
   }
 
   .swiper-pagination-bullet-active {
     background: rgba(255, 51, 51, 0.5);
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.wrapper-our-products-and-sliderProduction {
+  background-image: url('./../img/our-product-background.png');
+  background-size: cover;
+}
+
+.our-products {
+  margin: 0 auto;
+  width: 980px;
+
+  &>.our-products__caption {
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  &__euroflex-this-list {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+    line-height: 25px;
+
+    &__item {}
+  }
+
+  &__link {
+    color: #FF5C5C;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  &__statistic {
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  &__statistic-block {
+    &__name {
+      display: flex;
+      align-items: flex-end;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 59px;
+      color: #FF5C5C;
+
+      &>span {
+        font-size: 28px;
+        line-height: 33px;
+        padding-bottom: 5px;
+      }
+    }
+
+    &__descrition {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 }
