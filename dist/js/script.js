@@ -170,7 +170,7 @@ function setCursorPosition(pos, e) {
     setCursorPosition(i, this)
   }
   window.addEventListener("DOMContentLoaded", function() {
-    var input = document.querySelector("#modal-window__form-phone");
+    let input = document.querySelector("#modal-window__form-phone");
     input?.addEventListener("input", mask, false);
     input.focus();
     setCursorPosition(3, input);

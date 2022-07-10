@@ -177,107 +177,6 @@ header .short-deskription__icon-text {
   text-align: center;
 }
 
-header .modal-window {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 300px;
-  height: 400px;
-  padding: 10px 30px 20px 30px;
-  background-color: #FFFFFF;
-  position: absolute;
-  bottom: -5%;
-  right: 10%;
-}
-
-header .modal-window__caption {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 23px;
-  line-height: 32px;
-}
-
-header .modal-window__alert {
-  color: #80A2C5;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-}
-
-header .modal-window__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-}
-
-header .modal-window__form-label {
-  margin-bottom: 5px;
-}
-
-header .modal-window__form-input {
-  margin-bottom: 15px;
-  border: none;
-  background-color: #EDEFF2;
-  padding: 5px;
-  background: #EDEFF2;
-  -webkit-box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.12);
-          box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.12);
-  border-radius: 2px;
-  color: #939599;
-}
-
-header .modal-window__form-input:focus {
-  outline: none;
-}
-
-header .modal-window__confiditial {
-  color: #BCBFC4;
-  position: relative;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 12px;
-  text-align: center;
-}
-
-header .modal-window__confiditial::before {
-  content: "";
-  position: absolute;
-  left: -20px;
-  bottom: -5px;
-  width: 20px;
-  height: 20px;
-  background-repeat: no-repeat;
-  background-image: url("./../img/icons/lock.svg");
-}
-
-header .modal-window__button {
-  border: none;
-  height: 50px;
-  cursor: pointer;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  -webkit-box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
-          box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
-  border-radius: 2px;
-}
-
 .ous-production__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -706,6 +605,21 @@ hr.doter-horizon-line {
 .wrapper-our-products-and-sliderProduction {
   background-image: url("./../img/our-product-background.png");
   background-size: cover;
+  position: relative;
+  z-index: 0;
+}
+
+.wrapper-our-products-and-sliderProduction::after {
+  z-index: -1;
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.5)));
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
 }
 
 .our-products {
@@ -771,6 +685,240 @@ hr.doter-horizon-line {
   line-height: 18px;
 }
 
+.advantages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  margin: 50px 0;
+}
+
+.advantages__wrapper {
+  margin-top: 100px;
+}
+
+.advantages__h1 {
+  text-align: center;
+}
+
+.advantages__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.advantages__icon {
+  width: 89.31px;
+  height: 89.31px;
+}
+
+.advantages__text {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.04em;
+}
+
+.questions {
+  width: 600px;
+  padding-top: 83px;
+}
+
+.questions h2 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  color: #FFFFFF;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.questions-checkbox {
+  display: grid;
+  row-gap: 50px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.questions-checkbox__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.questions-checkbox__item input {
+  width: 20px;
+  height: 20px;
+}
+
+.questions-checkbox__item label {
+  margin-left: 20px;
+  color: #EDEFF2;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.questions .modal-window_question {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+}
+
+.questions_wrapper {
+  background-image: url("./../img/question-img.png");
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+  width: 100%;
+  height: 528px;
+  opacity: 0.8;
+}
+
+.questions_wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(34, 34, 34, 0.8);
+  z-index: -1;
+}
+
+.modal-window {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+  height: 400px;
+  padding: 10px 30px 20px 30px;
+  background-color: #FFFFFF;
+}
+
+.modal-window_header {
+  position: absolute;
+  bottom: -5%;
+  right: 10%;
+}
+
+.modal-window__caption {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 32px;
+}
+
+.modal-window__alert {
+  color: #80A2C5;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.modal-window__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.modal-window__form-label {
+  margin-bottom: 5px;
+}
+
+.modal-window__form-input {
+  margin-bottom: 15px;
+  border: none;
+  background-color: #EDEFF2;
+  padding: 5px;
+  background: #EDEFF2;
+  -webkit-box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.12);
+          box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+  color: #939599;
+}
+
+.modal-window__form-input:focus {
+  outline: none;
+}
+
+.modal-window__confiditial {
+  color: #BCBFC4;
+  position: relative;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+}
+
+.modal-window__confiditial::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: -5px;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-image: url("./../img/icons/lock.svg");
+}
+
+.modal-window__button {
+  border: none;
+  height: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
+          box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+}
+
+footer {
+  background-image: url("./../img/footer-background.png");
+}
+
+footer .footer-text {
+  width: 60%;
+}
+
+footer p {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4F4F4F;
+}
+
 .webp header { background-image: url(./../img/header_background-image.webp); }
 
 .webp .industry-solutions__item-solution_vagatables { background-image: url(../img/vagetable.webp); }
@@ -782,3 +930,7 @@ hr.doter-horizon-line {
 .webp .sliderProdWrapper > .next-forw::before { background-image: url(./../img/icons/button-back.webp); }
 
 .webp .wrapper-our-products-and-sliderProduction { background-image: url(./../img/our-product-background.webp); }
+
+.webp .questions_wrapper { background-image: url(./../img/question-img.webp); }
+
+.webp footer { background-image: url(./../img/footer-background.webp); }

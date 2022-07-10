@@ -363,6 +363,20 @@ $maxHeightForListSolution: 1000px;
 .wrapper-our-products-and-sliderProduction {
   background-image: url('./../img/our-product-background.png');
   background-size: cover;
+  position: relative;
+  z-index: 0;
+
+  &::after {
+    z-index: -1;
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255, 0.5) 100%);
+  }
+
 }
 
 .our-products {
@@ -422,6 +436,106 @@ $maxHeightForListSolution: 1000px;
       font-weight: 400;
       font-size: 14px;
       line-height: 18px;
+    }
+  }
+}
+
+
+.advantages {
+  &__wrapper {
+    margin-top: 100px;
+  }
+
+  &__h1 {
+    text-align: center;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  margin: 50px 0;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 89.31px;
+    height: 89.31px;
+  }
+
+  &__text {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: 0.04em;
+  }
+}
+
+.questions {
+  width: 600px;
+  // margin: 0px auto auto 250px;
+  padding-top: 83px;
+
+  h2 {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    color: #FFFFFF;
+    align-items: center;
+  }
+
+  &-checkbox {
+    display: grid;
+    row-gap: 50px;
+    grid-template-columns: 1fr 1fr;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      input {
+        width: 20px;
+        height: 20px;
+      }
+      label {
+        margin-left: 20px;
+        color: #EDEFF2;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px;
+        text-decoration-line: underline;
+      }
+    }
+  }
+
+  .modal-window_question {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+  }
+
+  &_wrapper {
+    background-image: url('./../img/question-img.png');
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    width: 100%;
+    height: 528px;
+    opacity: 0.8;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgb(34, 34, 34, 0.8);
+      z-index: -1;
     }
   }
 }
